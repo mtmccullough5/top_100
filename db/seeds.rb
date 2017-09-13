@@ -8,8 +8,8 @@
 genres = ["Rock", "Alternative", "Country", "Pop", "Electronic", "Blues"]
 100.times do
   Song.create(
-    title: Faker::Book.unique.title
-    artist: Faker::RockBand.name
+    title: Faker::Book.unique.title,
+    artist: Faker::RockBand.name,
     rank: [1..100].sample,
     genre: genres.sample
   )
