@@ -6,11 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 genres = ["Rock", "Alternative", "Country", "Pop", "Electronic", "Blues"]
-100.times do
+ranks =[*1..100]
+100.times do 
   Song.create(
     title: Faker::Book.unique.title,
     artist: Faker::RockBand.name,
-    rank: [1..100].sample,
+    rank: ranks.sample,
     genre: genres.sample
   )
 end
