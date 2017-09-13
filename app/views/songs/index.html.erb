@@ -4,10 +4,11 @@
 <%= link_to 'New Top 100 Song Addition', new_song_path %>
 </p>
 
+<div class="ui bulleted list">
 <ul>
   <% @songs.each do |song| %>
-    <li> 
+    <div class="item">
       <%= link_to song.title, song_path(song) %>
-    </li>
+    </div>
   <% end %>
 </ul>
