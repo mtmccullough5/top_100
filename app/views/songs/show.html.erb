@@ -5,3 +5,5 @@
 <h1> Current Rank </h1>
 <h1><%= @song.rank %></li>
 
+<%= link_to 'Edit Song', edit_song_path(@song) %>
+<%= link_to 'Delete Song', song_path(@song), method: :delete%>
